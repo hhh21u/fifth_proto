@@ -1,6 +1,6 @@
 // Starter Proto file, feel free to change name of the file
 syntax = "proto3";
-option go_package = "github.com/hhh21u/final_proto";
+option go_package = "github.com/hhh21u/new_proto";
 // option java_multiple_files = true;
 // option java_package = "io.grpc.examples.helloworld";
 // option java_outer_classname = "HelloWorldProto";
@@ -13,6 +13,14 @@ service Greeter {
   rpc PrintGatech (PrintRequest) returns (PrintReply) {}
   rpc UpdateMaster (GetRequest) returns (GetReply) {}
   rpc ReplyFromWorker (PrintRequest) returns (PrintReply) {}
+  rpc GetContainers (GetNames) returns (PrintReply) {}
+}
+
+
+// The request message containing the user's name.
+message GetNames {
+  string file_container = 1;
+  string code_container = 2;
 }
 
 // The request message containing the user's name.
