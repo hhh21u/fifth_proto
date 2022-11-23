@@ -1,6 +1,6 @@
 // Starter Proto file, feel free to change name of the file
 syntax = "proto3";
-option go_package = "github.com/hhh21u/new_proto";
+option go_package = "github.com/hhh21u/four_proto";
 // option java_multiple_files = true;
 // option java_package = "io.grpc.examples.helloworld";
 // option java_outer_classname = "HelloWorldProto";
@@ -21,6 +21,8 @@ service Greeter {
 message GetNames {
   string file_container = 1;
   string code_container = 2;
+  int32 nmap = 3;
+  int32 nreduce = 4;
 }
 
 // The request message containing the user's name.
